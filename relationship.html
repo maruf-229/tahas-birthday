@@ -12,22 +12,98 @@
 <body>
     <canvas id="confetti" class="confetti-canvas"></canvas>
 
-    <section class="section">
-        <div class="container">
-            <h2>The Spark of Our Love</h2>
-            <p>It all started on July 19, 2025, with that first text message that changed everything. We connected instantly, sharing thoughts and dreams. Then came the first images – yours captivated me, and mine impressed you. Our first meet was magical, in a cinema hall, where the movie was just a backdrop to our budding romance.</p>
-            <div class="row text-center">
-                <div class="col-md-6">
-                    <img src="images/her-picture.jpg" alt="Picture of Her" class="img-fluid rounded clickable" onclick="playAudio('audio/her-audio.mp3')"> <!-- Replace image and audio src -->
-                    <p>Click my picture to hear a special message!</p>
-                </div>
-                <div class="col-md-6">
-                    <img src="images/my-picture.jpg" alt="Picture of Me" class="img-fluid rounded"> <!-- Replace image -->
-                    <button class="btn btn-primary mt-3" onclick="playAudio('audio/my-audio.mp3')">Play Audio That Impressed Her</button> <!-- Replace audio src -->
+    <section class="section py-5">
+        <div class="container text-center">
+            <h2>The Spark of Our Love 💫</h2>
+            <p class="lead mb-5">
+                It all began on July 19, 2025, with that one text message that lit up my world.  
+                From instant connection to shared dreams, then the photos that stole our hearts,  
+                and our magical first meeting in the cinema hall — where the movie faded, and you became my everything.
+            </p>
+
+            <!-- First conversation screenshot - size unchanged -->
+            <div class="mb-5">
+                <div class="image-hover-wrapper">
+                    <img src="images/chat.jpeg" alt="Our First Conversation" 
+                         class="img-fluid rounded shadow-lg hover-zoom" 
+                         onmouseover="playHoverAudio('audio/chat.mp3')"
+                         onmouseout="stopHoverAudio()"
+                         style="max-height: 500px;">
+                    <div class="caption-container">
+                        <p class="small fw-light poetic-caption">
+                            That very first message... the moment everything changed ❤️
+                        </p>
+                    </div>
                 </div>
             </div>
-            <audio id="relationship-audio" preload="auto"></audio>
-            <div class="btn-container">
+
+            <div class="row g-4 justify-content-center">
+                <!-- Her story image -->
+                <div class="col-12 col-md-6">
+                    <div class="image-hover-wrapper">
+                        <img src="images/chat1.jpeg" alt="Her Story Photo That Captivated Me" 
+                             class="img-fluid rounded shadow hover-zoom" 
+                             onmouseover="playHoverAudio('audio/valobasbo.mp3')"
+                             onmouseout="stopHoverAudio()">
+                        <div class="caption-container">
+                            <p class="small fw-light poetic-caption">
+                                The story photo you posted... one look and I was completely yours.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Your image -->
+                <div class="col-12 col-md-6">
+                    <div class="image-hover-wrapper">
+                        <img src="images/chat2.jpeg" alt="My Picture That Impressed You" 
+                             class="img-fluid rounded shadow hover-zoom" 
+                             onmouseover="playHoverAudio('audio/kodom.mp3')"
+                             onmouseout="stopHoverAudio()">
+                        <div class="caption-container">
+                            <p class="small fw-light poetic-caption">
+                                The photo of me that made your heart skip — thank you for falling for it (and me).
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- First meeting image -->
+                <div class="col-12 col-md-6">
+                    <div class="image-hover-wrapper">
+                        <img src="images/us1.jpeg" alt="Our First Meeting in Cinema Hall" 
+                             class="img-fluid rounded shadow hover-zoom" 
+                             onmouseover="playHoverAudio('audio/mon1.mp3')"
+                             onmouseout="stopHoverAudio()">
+                        <div class="caption-container">
+                            <p class="small fw-light poetic-caption">
+                                Our first real moment together — cinema lights dim, but our spark was the brightest thing there.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mirror selfie - cheek kiss -->
+                <div class="col-12 col-md-6">
+                    <div class="image-hover-wrapper">
+                        <img src="images/us2.jpeg" alt="Mirror Selfie - Her Kissing My Cheek" 
+                             class="img-fluid rounded shadow hover-zoom" 
+                             onmouseover="playHoverAudio('audio/mon2.mp3')"
+                             onmouseout="stopHoverAudio()">
+                        <div class="caption-container">
+                            <p class="small fw-light poetic-caption">
+                                That sweet mirror moment — your soft kiss on my cheek,  
+                                the first time I felt your love so close... my heart still races thinking about it.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Single audio element for hover sounds -->
+            <audio id="hover-audio" preload="auto"></audio>
+
+            <div class="btn-container mt-5">
                 <a href="message.html" class="btn-love shake">My Eternal Love Message →</a>
                 <a href="index.html" class="btn-love">← Back to Home</a>
             </div>

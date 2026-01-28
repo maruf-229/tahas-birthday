@@ -61,3 +61,22 @@ function playAudio(src) {
     audio.src = src;
     audio.play();
 }
+
+
+// Hover audio control (one audio element reused)
+const hoverAudio = document.getElementById('hover-audio');
+
+function playHoverAudio(src) {
+    if (hoverAudio) {
+        hoverAudio.src = src;
+        hoverAudio.currentTime = 0; // Restart from beginning
+        hoverAudio.play().catch(e => console.log("Audio play failed:", e));
+    }
+}
+
+function stopHoverAudio() {
+    if (hoverAudio) {
+        hoverAudio.pause();
+        hoverAudio.currentTime = 0; // Optional: reset
+    }
+}
